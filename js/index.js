@@ -10,6 +10,26 @@ $(document).ready(function() {
   $('.slide' + curr).css("left","0");
   $('.slide' + curr).css("transform","scale(1)");
 
+  $('body').on('mousemove', function(e){
+    if( e.clientY > $(window).height()/3 ){
+      if( Math.abs($(window).width() - e.clientX) < 2*$(window).width()/3 && Math.abs($(window).width() - e.clientX) > $(window).width()/3 ){
+        $('.svg').show();
+      }else{
+        $('.svg').hide();
+      }
+    }else{
+      $('.svg').hide();
+    }
+  });
+  // $('img').on({
+  //   'mouseenter': function(){
+  //     $('svg').show();
+  //   },
+  //   'mouseleave': function(){
+  //     $('svg').hide();
+  //   }
+  // })
+
   $('.slide').on ('mousewheel', function (e) {
     if (finished) {
       finished = false;
