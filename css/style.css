@@ -49,6 +49,11 @@ div[class^="slide"] {
   position: absolute;
 }
 
+.slide p{
+  width: 60%;
+  margin: auto;
+}
+
 .slide1 {
   background: #FF6961;
   color: white;
