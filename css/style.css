@@ -63,6 +63,12 @@ div[class^="slide"] {
   position: absolute;
 }
 
+.slide img{
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+}
+
 .line{
   stroke-width: 3;
   stroke: black;
@@ -116,4 +122,56 @@ div[class^="slide"] {
 .slide5 {
   background: #FFD1DC;
   color: #b49098;
+}
+
+
+.block {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25vw;
+  height: 25vw;
+  background: white;
+  border: 5px solid #000;
+}
+.block p {
+  font-family: sans-serif;
+  width: 80%;
+  margin-left: 10%;
+}
+.block .red {
+  color: #f00;
+}
+.block .del {
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+.block .sel {
+  font-weight: bolder;
+}
+.block .action {
+  -webkit-animation: blink;
+          animation: blink;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+@-webkit-keyframes blink {
+  from {
+    color: #f00;
+    font-size: 1.5em;
+  }
+  to {
+    color: #000;
+  }
+}
+@keyframes blink {
+  from {
+    color: #f00;
+    font-size: 1.5em;
+  }
+  to {
+    color: #000;
+  }
 }

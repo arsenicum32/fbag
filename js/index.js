@@ -2,7 +2,7 @@ $(document).ready(function() {
   var count = $('[class^="slide"]').size();
   var lastScrollTop = 0;
   var prev = count;
-  var curr = 1;
+  window.curr = 1;
   var now = 8;
   var next = 2;
   var finished = true;
@@ -11,7 +11,7 @@ $(document).ready(function() {
   $('.slide' + curr).css("transform","scale(1)");
 
   $('body').on('mousemove', function(e){
-    if( e.clientY > $(window).height()/3 ){
+    if( e.clientY > $(window).height()/3 && curr!=1 ){
       if( Math.abs($(window).width() - e.clientX) < 2*$(window).width()/3 && Math.abs($(window).width() - e.clientX) > $(window).width()/3 ){
         $('.svg').show();
       }else{
