@@ -175,3 +175,77 @@ div[class^="slide"] {
     color: #000;
   }
 }
+
+
+@media only screen and (max-width: 400px) {
+  .zak {
+    width: 100vw;
+    left: 0;
+    border: none;
+  }
+  .zak .img {
+    display: none;
+  }
+  .fn {
+    width: 100%;
+  }
+}
+.zak {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  width: 80vw;
+  height: 80vh;
+  background: #fff;
+  border: 5px solid #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.zak .img {
+  width: 40%;
+  background: url("../bags/obl.jpg") no-repeat center center;
+  background-size: cover;
+}
+.zak .fn {
+  width: 60%;
+}
+.zak .fn p,
+.zak .fn h2,
+.zak .fn a,
+.zak .fn input {
+  font-family: sans-serif;
+  width: 80%;
+  margin-left: 10%;
+}
+.zak .fn input {
+  border: none;
+  background: #eee;
+  padding: 3px;
+  width: 60%;
+  font-size: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.zak .fn a {
+  margin: 10%;
+  background: #ffc0cb;
+  text-decoration: none;
+  color: #fff;
+  padding: 7px;
+}
+.zak .fn .small {
+  font-size: 0.75em;
+  color: #444;
+}
+.zak .fn .red {
+  color: #f00;
+}
+.zak .fn .del {
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+.zak .fn .sel {
+  font-weight: bolder;
+}
