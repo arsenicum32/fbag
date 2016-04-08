@@ -92,7 +92,7 @@ var  rect = d3.select('body').append('div')
 //   fill:'black'
 // })
 
-svg.on('mousemove', function(){
+svg.on({'mousemove': function(){
   l1.attr({
     x2: d3.mouse(this)[0],
     y2: d3.mouse(this)[1]
@@ -117,4 +117,16 @@ svg.on('mousemove', function(){
     left: d3.mouse(this)[0] +10 +'px',
     top: d3.mouse(this)[1] - 20 +'px'
   })
-})
+},
+'click': function(){
+  sh = 1 -sh;
+  if(sh){
+    d3.select('.zak').attr('style', '');
+  }else{
+    d3.select('.zak').attr('style', 'none');
+  }
+}})
+
+var sh = 0;
+$('.svg').on('click', function(){
+});
